@@ -4,7 +4,6 @@
 // 782 -> 8
 // 918 -> 1
 
-
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
