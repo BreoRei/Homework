@@ -6,17 +6,15 @@
 
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int n1 = 0;
 
 if (99 < num)
 {
     while (num > 999)
     {
-        n1 = num / 10;
-        num = n1;
+        num /= 10;
     }
-    n1 = num % 10;
-    Console.WriteLine($"{n1}");
+    num %= 10;
+    Console.WriteLine($"{num}");
 }
 else
     Console.WriteLine($"Третьей цифры нет");
