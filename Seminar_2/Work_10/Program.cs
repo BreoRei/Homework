@@ -9,9 +9,8 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 if (100 <= num && num < 1000)
 {
-    int first_num = num % 100;
-    int second_num = first_num / 10;
-    Console.WriteLine($"{second_num}");
+    num = (num %= 100) / 10;
+    Console.WriteLine($"{num}");
 }
 else
     Console.WriteLine($"Не верный ввод");
