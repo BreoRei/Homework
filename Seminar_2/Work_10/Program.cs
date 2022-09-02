@@ -15,4 +15,3 @@ if (100 <= num && num < 1000)
 }
 else
     Console.WriteLine($"Не верный ввод");
-
