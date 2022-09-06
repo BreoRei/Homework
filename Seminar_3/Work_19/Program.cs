@@ -20,9 +20,9 @@ while (help > 0)
 int numbers_two = Convert.ToInt32(numbers_one);
 if (numbers == numbers_two)
 {
-    Console.Write("Число являеться палиндромом");
+    Console.Write("Число является палиндромом");
 }
 else
 {
-    Console.Write("Число не являеться палиндромом");
+    Console.Write("Число не является палиндромом");
 }
