@@ -8,16 +8,16 @@ Console.Write("Введите число: ");
 int numbers = Convert.ToInt32(Console.ReadLine());
 
 int help = numbers;
-string numbers_one = "";
+string revers = "";
 
 while (help > 0)
 {
     int x = help % 10;
     help /= 10;
-    numbers_one += x;
+    revers += x;
     int х = 0;
 }
-int numbers_two = Convert.ToInt32(numbers_one);
+int numbers_two = Int32.Parse(revers);
 if (numbers == numbers_two)
 {
     Console.Write("Число является палиндромом");
