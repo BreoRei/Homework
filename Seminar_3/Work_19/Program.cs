@@ -4,25 +4,19 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.Write("Введите число: ");
-int numbers = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+int numbers = num;
+int polydrome = 0;
 
-int help = numbers;
-string revers = "";
-
-while (help > 0)
+while (num != 0)
 {
-    int x = 0;
-    x = help % 10;
-    help /= 10;
-    revers += x;
+    polydrome = polydrome * 10 + (num % 10);
+    num /= 10;
 }
-int numbers_two = Int32.Parse(revers);
-if (numbers == numbers_two)
+if (numbers == polydrome)
 {
-    Console.Write("Число является палиндромом");
+    Console.WriteLine($"{numbers} является палиндромом");
 }
 else
-{
-    Console.Write("Число не является палиндромом");
-}
+    Console.WriteLine($"{numbers} не является палиндромом");
