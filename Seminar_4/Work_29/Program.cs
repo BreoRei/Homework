@@ -13,4 +13,4 @@ for (int index = 0; index < number; index++)
     array[index] = new Random().Next(A, B);
     Console.Write($"{array[index]}, ");
 }
-
+    
