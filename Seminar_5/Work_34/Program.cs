@@ -5,17 +5,37 @@
 Console.Clear();
 Console.Write("Введите длинну массива: ");
 int number = Convert.ToInt32(Console.ReadLine());
+Console.Write("Показать массив? Введите 1 если 'да'\nЛюбое другую цифру есть нет: ");
+int examination = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[number];
-int count = 0;
+
 for (int index = 0; index < number; index++)
 {
-    array[index] = new Random().Next(100, 1000);
-    Console.Write($"{array[index]} ");
-    if (array[index] % 2 == 0)
+    if (examination == 1)
     {
-        count++;
+        array[index] = new Random().Next(100, 1000);
+        Console.Write($"{array[index]} ");
+    }
+    else
+    {
+        array[index] = new Random().Next(100, 1000);
     }
 }
-Console.WriteLine();
-Console.WriteLine($"Количество чётных чисел в массиве = {count}");
+//метод подсчета количество чётных чисел в массиве
+void NumberOfEvenNumbers(int[] arr)
+{
+    int count = 0;
+    for (int index = 0; index < number; index++)
+    {
+        if (arr[index] % 2 == 0)
+        {
+            count++;
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine($"Количество чётных чисел в массиве = {count}");
+}
+
+
+NumberOfEvenNumbers(array);
