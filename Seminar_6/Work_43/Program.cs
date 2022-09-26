@@ -7,11 +7,6 @@ void PrintTextToString(String text)
     Console.Write(text);
 }
 
-void PrintTextWithLineBreak(String text)
-{
-    Console.WriteLine(text);
-}
-
 double NumberIntroduction()
 {
     double number = Convert.ToDouble(Console.ReadLine());
@@ -28,16 +23,16 @@ PrintTextToString("Введите угол  k2: ");
 double k2 = NumberIntroduction();
 
 if (k1 == k2 && b1 == b2)
-{ 
+{
     PrintTextToString($"Точки пересечения бесконечны, прямые равны.");
 }
 else if (k1 == k2 && b1 != b2)
 {
     PrintTextToString($"Точки пересечения отсутствуют, прямые параллельны.");
 }
-else 
+else
 {
-    double x = (b2 - b1) / (k1 - k2); 
+    double x = (b2 - b1) / (k1 - k2);
     double y = k1 * (b2 - b1) / (k1 - k2) + b1;
     PrintTextToString($"Точка пересечения прямых b1 и b2 в координате по (x:y) = ({x}:{y})");
 }
